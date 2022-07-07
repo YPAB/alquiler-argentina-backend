@@ -1,0 +1,61 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Alquiler Argentina - Backend Test",
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/api/v1/pokemon": {
+            "get": {
+                "tags": [
+                    "Pokemon"
+                ],
+                "summary": "Listado de pokemos y sus tipos asociados.",
+                "description": "Permite detallar los pokemos y sus tipos registrados.",
+                "operationId": "e927d81191c2dfb9cb60f03f87cd01c4",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Nombre del Pokemon a buscar",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operacion Exitosa."
+                    }
+                }
+            }
+        },
+        "/api/v1/pokemons": {
+            "get": {
+                "tags": [
+                    "byPokemons"
+                ],
+                "summary": "Filtros por tipos..",
+                "description": "Permite detallar los pokemos y el tipo buscado.",
+                "operationId": "efbff3e0df1c1ea08fbf17cfbd754bcd",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Ingrese Tipo de Pokemon",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operacion Exitosa."
+                    }
+                }
+            }
+        }
+    }
+}
